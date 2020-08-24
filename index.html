@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mark Phạm</title>
+	<!--ensuring mobile responsive design-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- link to europa font: -->
+	<link rel="stylesheet" href="https://use.typekit.net/jsw4qwi.css">
+	<!-- link to brandon grotesque font: -->
+	<link rel="stylesheet" href="https://use.typekit.net/jsw4qwi.css">
+
+	<!-- stylesheets-->
+	<!-- <link rel="stylesheet" href="css/build/home.css"> -->
+	<link rel="stylesheet" href="index.css">
+	
+	<!--nav_bar dropdown icon-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    
+    <div class="grid_container">
+        <div class="grid_item flex_container">
+            <h2 class="flex_item">Mark Pham</h2>
+            <div class="flex_item">FEW Assessment</div>
+		</div>
+		
+        <div class="grid_item flex_container">
+			<label for="width" class="flex_item">Width:</label><br>
+			<input class="flex_item" type="number" id="width_input" oninput="changeInWidth()" name="width_input">
+			<label for="height" class="flex_item" >Height:</label><br>
+			<input class="flex_item" type="number" id="height_input" oninput="changeInHeight()"  name="height_input"><br>
+			<label for="color" class="flex_item" >Color:</label>
+			<input  class="flex_item" type="color" id="color_input" oninput="changeInColor()"  name="color_input"><br>	
+		</div>
+
+        <div class="grid_item flex_container">
+			<h3 class="flex_item">Width</h3>
+			<div class="flex_item" id="result_width">  </div>
+			<h3 class="flex_item">Height</h3>
+			<div class="flex_item" id="result_height">  </div>
+			<h3 class="flex_item">Color</h3>
+			<div class="flex_item" id="result_color">  </div>
+		</div>
+
+        <div class="grid_item flex_container">
+			<div class="flex_item"> Color: </div>
+			<div class="flex_item" id="result_display">  </div>
+
+		</div>
+	</div>
+	
+
+</body>
+<script>
+	function changeInWidth() {
+	  var value = document.getElementById("width_input").value;
+	  document.getElementById("result_width").innerHTML = value + "px";
+	  document.getElementById("result_display").style.width = value+"px";
+	}
+	function changeInHeight() {
+	  var value = document.getElementById("height_input").value;
+	  document.getElementById("result_height").innerHTML = value + "px";
+	  document.getElementById("result_display").style.height= value+"px";
+	}
+	function changeInColor() {
+	  var value = document.getElementById("color_input").value;
+	  document.getElementById("result_color").innerHTML = value;
+	  document.getElementById("result_display").style.backgroundColor = value;
+	}
+	</script>
+
+</html>
